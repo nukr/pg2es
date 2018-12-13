@@ -1,0 +1,14 @@
+version: '3'
+services:
+  postgres:
+    image: postgres:10
+    volumes:
+      - ./pgdata:/var/lib/postgresql/data
+    ports:
+      - 5432:5432
+  elasticsearch:
+    image: elasticsearch:5.6
+    ports:
+      - 9200:9200
+    volumes:
+      - ./esdata:/usr/share/elasticsearch/data
